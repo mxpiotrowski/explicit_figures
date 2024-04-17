@@ -1,6 +1,6 @@
 ---
 title: Test Document
-use_short_captions: true
+explicit_figures: {short_captions: true}
 lof: true
 ---
 

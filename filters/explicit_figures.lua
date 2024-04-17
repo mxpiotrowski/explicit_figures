@@ -1,15 +1,16 @@
--- [[
-explicit_figures – A Pandoc filter to explicitly create figures
+--[[
+   explicit_figures – A Pandoc filter to explicitly create figures
 
-Copyright © 2024 by Michael Piotrowski
-License: MIT.  See LICENSE file for details.
+   Copyright © 2024 by Michael Piotrowski
+   License: MIT.  See LICENSE file for details.
 ]]
 
 local use_short_captions = false
 local figcount = 0
 
 function get_options (meta)
-   if meta.use_short_captions == true then
+   if meta.explicit_figures and
+      meta.explicit_figures.short_captions == true then
       use_short_captions = true
    end
 end

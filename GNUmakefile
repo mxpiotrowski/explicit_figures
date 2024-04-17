@@ -12,7 +12,7 @@
 	--pdf-engine-opt=-U --pdf-engine-opt=-P-pa4 $<
 
 %.tex: %.md filters/*.lua
-	pandoc -s -f markdown-implicit_figures -t tex -o $@ \
+	pandoc -s -f markdown-implicit_figures -t latex -o $@ \
 	-L filters/explicit_figures.lua \
 	--pdf-engine=xelatex $<
 
@@ -27,4 +27,4 @@
 	-L filters/explicit_figures.lua $<
 
 clean:
-	rm -f *~
+	rm -f *~ test*.pdf test.{tex,ms,html}

@@ -12,7 +12,7 @@ A trailing backslash is far from obvious.  In my opinion, it’s preferable to _
 
 This filter turns Divs with the class `figure` into Figure AST elements.
 
-Paragraphs following the image are treated as the caption.  For example:
+The filter assumes that the first element in the Div is an Image.  Paragraphs following the Image are treated as the caption.  For example:
 
 ``` markdown
 ::: figure
@@ -22,6 +22,23 @@ An example of a finite automaton.
 :::
 ```
 
-If the metadata value `use_short_captions` is set to `true`, and if there are several paragraphs, the content of the first paragraph will be used as “short” caption (which is used, e.g., by LaTeX in the list of figures).
+⚠ Make sure you turn off the `implicit_figures` extension (see the [Pandoc User’s Guide](https://pandoc.org/MANUAL.html#extensions)).
+
+The filter currently has one configuration setting:
+
+If the metadata field `explicit_figures.short_captions` is set to `true`, and if there are several paragraphs following the image, the content of the first paragraph will be used as “short” caption (which is used, e.g., by LaTeX in the list of figures).
+
+You can set this option in the YAML header or a separate metadata file like this:
+
+``` yaml
+explicit_figures:
+    short_captions: true
+```
+
+or like this
+
+``` yaml
+explicit_figures: {short_captions: true}
+```
 
 © 2024 by Michael Piotrowski <mxp@dynalabs.de>
