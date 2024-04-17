@@ -22,6 +22,6 @@ An example of a finite automaton.
 :::
 ```
 
-If the metadata value `use_short_captions` is set to `true`, and if there are several paragraphs, the content of the first paragraph will be used as “short” caption (which is used, e.g., by \LaTeX{} in the list of figures).
+If the metadata value `use_short_captions` is set to `true`, and if there are several paragraphs, the content of the first paragraph will be used as “short” caption (which is used, e.g., by LaTeX in the list of figures).
 
 © 2024 by Michael Piotrowski <mxp@dynalabs.de>
