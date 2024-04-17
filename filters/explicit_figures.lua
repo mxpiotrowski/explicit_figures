@@ -1,13 +1,9 @@
--- Time-stamp: <2024-04-17T18:49:24+0200 mpiotrow>
+-- [[
+explicit_figures – A Pandoc filter to explicitly create figures
 
--- The implicit_figures option is dumb. This filter turns Divs with
--- the class "figure" into Figure AST elements.
--- 
--- Paragraphs following the image are treated as the caption.
--- 
--- If the metadata value "use_short_captions" is set to true, and if
--- there are several paragraphs, the content of the first paragraph
--- will be used as "short" caption (which is used by LaTeX output).
+Copyright © 2024 by Michael Piotrowski
+License: MIT.  See LICENSE file for details.
+]]
 
 local use_short_captions = false
 local figcount = 0
